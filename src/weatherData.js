@@ -1,7 +1,7 @@
 function processWeatherData(data) {
   const weatherConditions = data.currentConditions;
   return {
-    location: data.address,
+    location: data.address.toUpperCase(),
     temperature: Math.round(weatherConditions.temp),
     feelsLike: Math.round(weatherConditions.feelslike),
     description: weatherConditions.conditions,
